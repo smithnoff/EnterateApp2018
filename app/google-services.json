@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1081613640933",
+    "firebase_url": "https://wp-firebase-b5c99.firebaseio.com",
+    "project_id": "wp-firebase-b5c99",
+    "storage_bucket": "wp-firebase-b5c99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081613640933:android:86fc01fb585c106f11600c",
+        "android_client_info": {
+          "package_name": "com.skynoff.enterateapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081613640933-9u4sms29isadsn6gs6rmrg37ae37pm9h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skynoff.enterateapp",
+            "certificate_hash": "2fe8a04ec39eee03b0ae992cbd23a424db08a829"
+          }
+        },
+        {
+          "client_id": "1081613640933-j531hu2i50pc3k8948bdk7drh667ntl6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0jerkVxzJrKS9mA8_7JKSSR_t0dsEWz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081613640933-j531hu2i50pc3k8948bdk7drh667ntl6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
