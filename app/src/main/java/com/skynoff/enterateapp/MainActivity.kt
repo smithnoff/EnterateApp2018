@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, NotificationsActivity::class.java))
             }
             R.id.menu_profile -> {
+                startActivity(Intent(this, ProfileActivity::class.java))
 
             }
             R.id.menu_home -> {
