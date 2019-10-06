@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/txt_seccion"
+        android:id="@+id/menu_section"/>
+    <item android:title="@string/txt_notificaciones"
+        android:id="@+id/menu_notification"/>
+    <item android:title="@string/txt_perfil"
+        android:id="@+id/menu_profile"/>
+</menu>

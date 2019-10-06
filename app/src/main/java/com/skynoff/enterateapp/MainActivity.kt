@@ -3,8 +3,12 @@ package com.skynoff.enterateapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import com.google.firebase.messaging.FirebaseMessaging
 import com.skynoff.enterateapp.ui.main.MainFragment
+import kotlinx.android.synthetic.main.main_fragment.*
+import org.jetbrains.anko.selector
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +22,8 @@ class MainActivity : AppCompatActivity() {
         }
         suscribeToGeneralNotifications()
     }
-    private fun suscribeToGeneralNotifications(){
+
+    private fun suscribeToGeneralNotifications() {
         FirebaseMessaging.getInstance().subscribeToTopic("general").addOnCompleteListener {
             var msg = "SUSCRITO"
             if (!it.isSuccessful) {
@@ -26,5 +31,69 @@ class MainActivity : AppCompatActivity() {
             }
             Log.i("Subscription Status", msg)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId) {
+            R.id.menu_section -> {
+                selector(
+                    "Selccione un categoria", listOf(
+                        "Nacionales",
+                        "Internacionales",
+                        "Economía",
+                        "Investigación",
+                        "Salud",
+                        "Deportes",
+                        "Variedades",
+                        "Ciencias",
+                        "Tal día como hoy"
+                    )
+                ) { _, i ->
+                    loadUrlSelected(i)
+
+                }
+            }
+            R.id.menu_notification -> {
+
+            }
+            R.id.menu_profile -> {
+
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun loadUrlSelected(i: Int) {
+        val url = when (i) {
+            0 -> "https://enterate24.com/category/nacionales/"
+            1 -> "https://enterate24.com/category/internacionales/"
+            2 -> "https://enterate24.com/category/economia/"
+            3 -> "https://enterate24.com/category/investigacion/"
+            4 -> "https://enterate24.com/category/salud/"
+            5 -> "https://enterate24.com/category/deportes/"
+            6 -> "https://enterate24.com/category/variedades/"
+            7 -> "https://enterate24.com/category/ciencias/"
+            8 -> "https://enterate24.com/category/tal-dia-como-hoy/"
+            else -> "https://enterate24.com/"
+        }
+        main_webview.loadUrl(url)
+        main_viewflipper.displayedChild = 0
+    }
+
+    override fun onBackPressed() {
+        if (main_webview.canGoBack()) {
+            main_webview.loadUrl("https://enterate24.com/")
+            main_viewflipper.displayedChild = 0
+        } else {
+            super.onBackPressed()
+        }
+
     }
 }
