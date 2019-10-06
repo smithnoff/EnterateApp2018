@@ -1,14 +1,18 @@
 package com.skynoff.enterateapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
+import androidx.appcompat.app.ActionBar
 import com.google.firebase.messaging.FirebaseMessaging
 import com.skynoff.enterateapp.ui.main.MainFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 import org.jetbrains.anko.selector
+import org.jetbrains.anko.startActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,7 +24,11 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.container, MainFragment.newInstance())
                 .commitNow()
         }
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.title = "   ${getString(R.string.app_name)}"
+        supportActionBar?.setIcon(R.mipmap.ic_logo_e24)
         suscribeToGeneralNotifications()
+
     }
 
     private fun suscribeToGeneralNotifications() {
@@ -61,10 +69,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             R.id.menu_notification -> {
-
+                startActivity(Intent(this, NotificationsActivity::class.java))
             }
             R.id.menu_profile -> {
 
+            }
+            R.id.menu_home -> {
+                loadUrlSelected(-1)
             }
         }
         return super.onOptionsItemSelected(item)
@@ -72,6 +83,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadUrlSelected(i: Int) {
         val url = when (i) {
+            -1 -> main_webview.url
             0 -> "https://enterate24.com/category/nacionales/"
             1 -> "https://enterate24.com/category/internacionales/"
             2 -> "https://enterate24.com/category/economia/"
@@ -88,7 +100,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (main_webview.canGoBack()) {
+        if (main_webview.canGoBack() && main_webview.url != "https://enterate24.com/") {
             main_webview.loadUrl("https://enterate24.com/")
             main_viewflipper.displayedChild = 0
         } else {

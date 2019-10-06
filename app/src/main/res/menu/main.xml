@@ -2,6 +2,10 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item android:title=""
+        android:icon="@drawable/ic_refresh_black_24dp"
+        android:id="@+id/menu_home"
+        app:showAsAction="always"/>
     <item android:title="@string/txt_seccion"
         android:id="@+id/menu_section"/>
     <item android:title="@string/txt_notificaciones"
