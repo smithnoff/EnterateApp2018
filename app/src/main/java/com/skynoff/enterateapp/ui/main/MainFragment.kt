@@ -4,18 +4,18 @@ import android.content.Intent
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.util.Log
-import android.view.KeyEvent
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.webkit.WebView
 import android.widget.ViewFlipper
 import androidx.lifecycle.Observer
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.messaging.FirebaseMessaging
 import com.skynoff.enterateapp.CustomWebViewClient
+import com.skynoff.enterateapp.MAIN_WEB
 import com.skynoff.enterateapp.R
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment() {
 
@@ -48,7 +48,9 @@ class MainFragment : Fragment() {
         webSettings.javaScriptEnabled = true
         webSettings.displayZoomControls = true
         webView.settings.setSupportMultipleWindows(true)
-        webView.loadUrl("https://enterate24.com/")
+
+        val urldef = arguments?.getString("link_category") ?: MAIN_WEB
+        webView.loadUrl(urldef)
 
         webView.setOnKeyListener { v, keyCode, event ->
             if (event.action == KeyEvent.ACTION_DOWN) {

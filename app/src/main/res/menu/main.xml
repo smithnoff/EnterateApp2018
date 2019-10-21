@@ -4,12 +4,17 @@
 
     <item android:title=""
         android:icon="@drawable/ic_refresh_black_24dp"
-        android:id="@+id/menu_home"
+        android:id="@+id/menu_refresh"
         app:showAsAction="always"/>
-    <item android:title="@string/txt_seccion"
+    <item
+        android:visible="false"
+        android:title="@string/txt_seccion"
         android:id="@+id/menu_section"/>
     <item android:title="@string/txt_notificaciones"
         android:id="@+id/menu_notification"/>
-    <item android:title="@string/txt_perfil"
+    <item
+        android:visible="false"
+        app:showAsAction="never"
+        android:title="@string/txt_perfil"
         android:id="@+id/menu_profile"/>
 </menu>

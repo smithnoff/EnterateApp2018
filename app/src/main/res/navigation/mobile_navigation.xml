@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.skynoff.enterateapp.ui.main.MainFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/main_fragment" />
+
+    <fragment
+        android:id="@+id/nav_national"
+        android:name="com.skynoff.enterateapp.ui.main.MainFragment"
+        android:label="@string/menu_national"
+        tools:layout="@layout/main_fragment" >
+        <argument
+            android:name="link_category"
+            app:argType="string"
+            android:defaultValue="https://enterate24.com/category/nacionales/" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_international"
+        android:name="com.skynoff.enterateapp.ui.main.MainFragment"
+        android:label="@string/menu_international"
+        tools:layout="@layout/main_fragment" >
+        <argument
+            android:name="link_category"
+            app:argType="string"
+            android:defaultValue="https://enterate24.com/category/internacionales/" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_economy"
+        android:name="com.skynoff.enterateapp.ui.main.MainFragment"
+        android:label="@string/menu_economy"
+        tools:layout="@layout/main_fragment" >
+        <argument
+            android:name="link_category"
+            app:argType="string"
+            android:defaultValue="https://enterate24.com/category/economia/" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_investigation"
+        android:name="com.skynoff.enterateapp.ui.main.MainFragment"
+        android:label="@string/menu_investigation"
+        tools:layout="@layout/main_fragment" >
+        <argument
+            android:name="link_category"
+            app:argType="string"
+            android:defaultValue="https://enterate24.com/category/investigacion/" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_health"
+        android:name="com.skynoff.enterateapp.ui.main.MainFragment"
+        android:label="@string/menu_health"
+        tools:layout="@layout/main_fragment" >
+        <argument
+            android:name="link_category"
+            app:argType="string"
+            android:defaultValue="https://enterate24.com/category/salud/" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_sports"
+        android:name="com.skynoff.enterateapp.ui.main.MainFragment"
+        android:label="@string/menu_sports"
+        tools:layout="@layout/main_fragment" >
+        <argument
+            android:name="link_category"
+            app:argType="string"
+            android:defaultValue="https://enterate24.com/category/deportes/" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_science"
+        android:name="com.skynoff.enterateapp.ui.main.MainFragment"
+        android:label="@string/menu_science"
+        tools:layout="@layout/main_fragment" >
+        <argument
+            android:name="link_category"
+            app:argType="string"
+            android:defaultValue="https://enterate24.com/category/ciencias/" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_miscellaneous"
+        android:name="com.skynoff.enterateapp.ui.main.MainFragment"
+        android:label="@string/menu_miscellaneous"
+        tools:layout="@layout/main_fragment" >
+        <argument
+            android:name="link_category"
+            app:argType="string"
+            android:defaultValue="https://enterate24.com/category/variedades/" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_today"
+        android:name="com.skynoff.enterateapp.ui.main.MainFragment"
+        android:label="@string/menu_today"
+        tools:layout="@layout/main_fragment" >
+        <argument
+            android:name="link_category"
+            app:argType="string"
+            android:defaultValue="https://enterate24.com/category/tal-dia-como-hoy/" />
+
+    </fragment>
+</navigation>

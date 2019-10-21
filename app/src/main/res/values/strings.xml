@@ -3,4 +3,22 @@
     <string name="txt_seccion">Secciones</string>
     <string name="txt_notificaciones">Notificaciones</string>
     <string name="txt_perfil">Perfil</string>
+    <string name="title_activity_home">Enterate 24</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Configuración</string>
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_national">Nacionales</string>
+    <string name="menu_international">Internacionales</string>
+    <string name="menu_economy">Economía</string>
+    <string name="menu_investigation">Investigación</string>
+    <string name="menu_health">Salud</string>
+    <string name="menu_miscellaneous">Variedades</string>
+    <string name="menu_sports">Deportes</string>
+    <string name="menu_science">Ciencias</string>
+    <string name="menu_today">Tal día como hoy</string>
 </resources>

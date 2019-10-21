@@ -6,13 +6,10 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.TextView
-import androidx.appcompat.app.ActionBar
 import com.google.firebase.messaging.FirebaseMessaging
 import com.skynoff.enterateapp.ui.main.MainFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 import org.jetbrains.anko.selector
-import org.jetbrains.anko.startActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -75,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, ProfileActivity::class.java))
 
             }
-            R.id.menu_home -> {
+            R.id.menu_refresh -> {
                 loadUrlSelected(-1)
             }
         }

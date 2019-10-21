@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_national"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_national" />
+        <item
+            android:id="@+id/nav_international"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_international" />
+        <item
+            android:id="@+id/nav_economy"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_economy" />
+
+        <item
+            android:id="@+id/nav_investigation"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_investigation" />
+
+        <item
+            android:id="@+id/nav_health"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_health" />
+
+        <item
+            android:id="@+id/nav_sports"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_sports" />
+        <item
+            android:id="@+id/nav_miscellaneous"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_miscellaneous" />
+        <item
+            android:id="@+id/nav_science"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_science" />
+        <item
+            android:id="@+id/nav_today"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_today" />
+    </group>
+</menu>
